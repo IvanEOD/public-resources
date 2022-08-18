@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+
+.root {
+
+    -primary-color: #7CBBC3;
+    -primary-color-lighter: #96C8CF;
+    -primary-color-darker: #568288;
+    -primary-contrast-text: rgba(0, 0, 0, 0.71);
+
+    -secondary-color: #607d8b;
+    -secondary-color-lighter: #78909c;
+    -secondary-color-darker: #435761;
+    -secondary-contrast-text: #FFFFFF;
+
+    -warning-color: #ff9800;
+    -warning-color-lighter: #ffa726;
+    -warning-color-darker: #c67700;
+    -warning-contrast-text: rgba(0, 0, 0, 0.87);
+
+    -error-color: #f44336;
+    -error-color-lighter: #ef5350;
+    -error-color-darker: #b80000;
+    -error-contrast-text: #FFFFFF;
+
+    -success-color: #4caf50;
+    -success-color-lighter: #66bb6a;
+    -success-color-darker: #2e7d32;
+    -success-contrast-text: rgba(0, 0, 0, 0.87);
+
+    -info-color: #2196f3;
+    -info-color-lighter: #42a5f5;
+    -info-color-darker: #0d47a1;
+    -info-contrast-text: #FFFFFF;
+
+    -background-default: #303030;
+    -background-default-lighter: #404040;
+    -background-default-darker: #1a1a1a;
+
+    -background-paper: #424242;
+    -background-paper-lighter: #616161;
+    -background-paper-darker: #1a1a1a;
+
+    -text-primary: #FFFFFF;
+    -text-secondary: rgba(255, 255, 255, 0.7);
+    -text-disabled: rgba(255, 255, 255, 0.5);
+    -text-hint: rgba(255, 255, 255, 0.5);
+
+    -divider-color: rgba(255, 255, 255, 0.12);
+
+    -default-font-family: "Syne Mono";
+
+    -primary-rippler: radial-gradient(focus-angle 0.0deg, focus-distance 0.0%, center 50.0% 50.0%, radius 50.0%, -primary-color 0.0%, -background-paper-lighter 100.0%);
+    -underline-primary: linear-gradient(from 0.0% 100.0% to 100.0% 100.0%, transparent 0.0%, -primary-color 15%, -primary-color 85%, transparent 100.0%);
+    -shadow: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50% 50%, radius 70%, #ffffffff 0.0%, #ffffffff 30%, #9e9e9eff 65%, #000000ff 100.0%);
+
+
+
+    -fx-base: -background-primary; /*60 63 65*/
+    -fx-background: -fx-base;
+    -fx-control-inner-background: -background-paper;
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+    -fx-accent: -primary-color;
+    -fx-default-button: -primary-color-darker; /*54 88 128*/
+    -fx-gradient-one: derive(-secondary-color, -20%);
+    -fx-gradient-two: derive(-secondary-color, -10%);
+    -fx-gradient-three: -secondary-color;
+    -fx-gradient-four: derive(-secondary-color, -8%);
+    -fx-gradient-five: derive(-secondary-color, -15%);
+    -fx-focus-color: -primary-color; /*75 110 175*/
+    -fx-faint-focus-color: derive(-primary-color, 30%);
+    -fx-color: -fx-base;
+    -fx-hover-base: -fx-base;
+    -fx-pressed-base: -fx-base;
+    -fx-text-background-color: -text-secondary;
+    -fx-box-border: -background-paper-lighter;
+    -fx-text-box-border: -fx-box-border;
+    -fx-shadow-highlight-color: transparent;
+    -fx-outer-border: -fx-box-border;
+    -fx-inner-border: -fx-base; /*76 80 82*/
+    -fx-inner-border-horizontal: -fx-base;
+    -fx-inner-border-bottomup: -fx-base;
+    -fx-body-color: -fx-base; /*76 80 82*/
+    -fx-body-color-bottomup: -fx-base;
+    -fx-body-color-to-right: -fx-base;
+    -fx-text-base-color: -fx-text-background-color;
+    -fx-text-inner-color: -fx-text-background-color;
+    -fx-mark-color: -fx-text-background-color;
+    -fx-mark-highlight-color: transparent;
+    -fx-selection-bar: -fx-focus-color;
+    -fx-selection-bar-non-focused: derive(-fx-focus-color, -20%);
+    -fx-cell-focus-inner-border: transparent;
+    -fx-focused-text-base-color: -fx-text-background-color;
+    -fx-focused-mark-color: -fx-text-background-color;
+}
+
+* {
+    -fx-focus-traversable: false;
+    -fx-font-family: -default-font-family;
+    -jfx-checked-color: -primary-color;
+    -jfx-toggle-color: -primary-color-lighter;
+    -jfx-toggle-line-color: -primary-color-darker;
+}
+
+
+
+
+.background {
+    -fx-background-color: dimgrey;
+}
+
+.hyperlink .text {
+    -fx-fill: -info-color;
+}
+
+.hyperlink:visited .text {
+    -fx-fill: -info-color-darker;
+}
+
+.accordion {
+    -fx-background-color: transparent;
+}
+
+.titled-pane .content {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.titled-pane .title {
+    -fx-text-fill: text-secondary;
+    -fx-background-color: linear-gradient(to bottom, -background-paper-lighter, -background-paper);
+    -fx-border-color: -background-paper transparent -background-paper-darker transparent;
+    -fx-border-width: 1 0 1 0;
+}
+
+.titled-pane:focused .title {
+    -fx-text-fill: -primary-contrast-text;
+    -fx-background-color: linear-gradient(to bottom, -background-paper-lighter, -background-paper);
+    -fx-border-color: -background-paper transparent -primary-color transparent;
+    -fx-border-width: 1 0 1 0;
+}
+
+.titled-pane:expanded .title .text,
+.titled-pane:focused .title .text {
+    -fx-fill: -primary-color;
+
+}
+.titled-pane .title .text {
+    -fx-fill: -text-secondary;
+
+}
+
+
+.title {
+    -fx-text-fill: -text-secondary;
+    -fx-font-size: 12;
+    -fx-font-family: -default-font-family;
+}
+
+.main-window {
+    -fx-alignment: center;
+    -fx-background-color: -background-default;
+    -fx-background-radius: 10;
+}
+
+.tool-bar {
+    -fx-background-radius: 10 10 0 0;
+    -fx-background-color: -background-paper-darker;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: -divider-color;
+}
+
+.minimize-button .text,
+.close-button:cancel .text {
+    -fx-text-fill: -text-secondary;
+    -fx-font-size: 8;
+    -fx-font-family: -default-font-family;
+    -fx-font-weight: bold;
+}
+
+.close-button,
+.minimize-button {
+    -fx-border-color: -divider-color;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-text-fill: -text-secondary;
+    -fx-background-radius: 5;
+}
+
+.minimize-button:hover {
+    -fx-background-color: -background-paper-darker;
+}
+
+.jfx-button {
+    -jfx-button-type: RAISED;
+    -fx-border-color: -primary-color;
+    -fx-text-fill: -primary-color;
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+    -fx-font-weight: bold;
+
+}
+
+Text {
+    -fx-fill: -text-primary;
+    -fx-stroke-width: 1;
+    -fx-stroke-top: outside;
+    -fx-stroke-line-cap: square;
+    -fx-stroke-line-join: miter;
+    -fx-stroke: -background-default;
+}
+
+.text-field-display {
+
+    -fx-text-fill: -text-primary;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+
+}
+
+.outline-box {
+    -fx-border-color: -divider-color;
+    -fx-border-width: 1;
+}
+
+.underline-box {
+    -fx-border-color: -divider-color;
+    -fx-border-width: 0 0 1 0;
+}
+
+.add-button {
+    -fx-border-style: inset;
+}
+
+.jfx-button:default {
+
+    -top-color: derive(-primary-color, 20%);
+    -bottom-color: derive(-primary-color, -20%);
+    -fx-text-fill: -primary-contrast-text;
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, -top-color 0.0%, -primary-color 15%, -primary-color 85%, -bottom-color 100.0%);
+}
+
+.jfx-button:default:cancel {
+
+}
+
+.jfx-button:cancel {
+    -fx-border-color: -error-color;
+    -fx-text-fill: -error-color;
+}
+
+.jfx-button:hover {
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.4), 5, 0.1, 0, 0);
+}
+
+.jfx-button:cancel:hover {
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.6), 5, 0.1, 0, 0);
+
+    /*-fx-effect: innershadow(gaussian, rgba(0, 0, 0), 5, 0.25, 0, 0);*/
+}
+
+
+
+.content-pane {
+    -fx-border-width: 0 2 2 2;
+    -fx-border-radius: 0 0 10 10;
+    -fx-border-color: -background-paper-darker;
+    -fx-max-width: 590;
+
+}
+
+.menu-bar {
+    -fx-border-width: 0 2 2 2;
+    -fx-border-style: solid;
+    -fx-blend-mode: src-atop;
+    -fx-text-fill: -text-secondary;
+    -fx-background-color: -background-paper;
+    -fx-border-color: -background-paper-darker;
+}
+
+.menu-bar .container .menu {
+    -fx-border-width: 1;
+    -fx-border-style: dashed;
+    -fx-border-color: transparent;
+    -fx-text-fill: -text-secondary;
+}
+
+.menu-bar .container .menu .label .text {
+    -fx-text-fill: -text-primary;
+    -fx-fill: -text-primary;
+}
+
+.menu-bar .container .menu .menu-item .label .text {
+    -fx-text-fill: -text-primary;
+    -fx-fill: -text-primary;
+}
+
+.menu-bar .container .menu:hover .label .text,
+.menu-bar .container .menu:focused .label .text,
+.menu-bar .container .menu:pressed .label .text,
+.menu-bar .container .menu:showing .label .text {
+    -fx-text-fill: -primary-color;
+    -fx-fill: -primary-color;
+}
+
+.menu-bar .container .menu:hover,
+.menu-bar .container .menu:focused,
+.menu-bar .container .menu:pressed,
+.menu-bar .container .menu:showing {
+    -fx-border-width: 1;
+    -fx-border-color: -primary-color;
+    -fx-background-color: transparent;
+    -fx-text-fill: -primary-color;
+    -fx-fill: -primary-color;
+}
+
+.menu-bar .container .menu .menu-item:hover .label .text,
+.menu-bar .container .menu .menu-item:focused .label .text,
+.menu-bar .container .menu .menu-item:pressed .label .text,
+.menu-bar .container .menu .menu-item:showing .label .text {
+    -fx-text-fill: -primary-color;
+    -fx-fill: -primary-color;
+}
+
+.menu-bar .container .menu .menu-item:hover,
+.menu-bar .container .menu .menu-item:focused,
+.menu-bar .container .menu .menu-item:pressed,
+.menu-bar .container .menu .menu-item:showing {
+    -fx-border-width: 0;
+    -fx-border-color: -primary-color;
+    -fx-background-color: transparent;
+    -fx-text-fill: -primary-color;
+    -fx-fill: -primary-color;
+}
+
+.menu-item:focused,
+.menu-item:pressed {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: -primary-color;
+    -fx-fill: -primary-color;
+}
+
+.menu-bar .container .menu-item .label .text {
+    -fx-fill: -text-secondary;
+}
+
+.menu-bar .container .menu-item:pressed .label .text,
+.menu-bar .container .menu-item:focused .label .text {
+    -fx-fill: -primary-color;
+}
+
+.context-menu {
+    -fx-background-color: -background-paper-lighter;
+}
