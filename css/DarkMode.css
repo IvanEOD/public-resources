@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
-
 /* default setting */
 .root {
     -darcula-base: #3c3f41; /*60 63 65*/
@@ -7,40 +5,65 @@
     -darcula-background-darkest: #2b2b2b; /*43 43 43*/
     -darcula-border-color: #646464;
 
+    -gray-blue-900: #303334;
+
+    -darcula-tab-pane-focused-color: #439EB8;
+    -darcula-titled-pane-focused-color-top: #434f60;
+    -darcula-titled-pane-focused-color-bottom: #414c5d;
+    -darcula-titled-pane-border-focused-bottom: #2a313c;
+
+    -darkgray: #4c5052;
+    -very-darkgray: #2D2F30;
+    -gray-500: #AAAAAA;
+    -gray-600: #707070;
+    -gray-700: #646464;
+    -gray-800: #4b4b4b;
+    -gray-900: #2b2b2b;
+
+    -tab-bottom-selected: #4a7a88;
+
+    -hyperlink-text-fill-color: #589df6;
+    -hyperlink-text-fill-color-hover: #52639a;
+    -hyperlink-text-fill-color-armed: #bc6f25;
+
     -darcula-text: #bbbbbb;
     -darcula-text-input-background: #45494a; /*69 73 74*/
     -darcula-text-highlight: #4b6baf;
     -darcula-text-disabled: #777777;
 
     -darcula-accent: #808080;
+    -button-default-dark-color: #4c708c;
 
+    -darcula-success-light-color: #59dd44;
+    -darcula-success-color: #00aa00;
+    -darcula-success-dark-color: #007900;
+
+    -darcula-focus-error-color: #ee250e;
+    -darcula-error-light-color: #e4472c;
+    -darcula-error-color: #db575c;
+    /* -darcula-error-color: #aa0000; */
+    -darcula-error-dark-color: #740000;
 
     /*JavaFX color palette*/
     -fx-base: -darcula-base; /*60 63 65*/
-
     -fx-background: -fx-base;
-
     -fx-control-inner-background: -darcula-text-input-background;
     -fx-control-inner-background-alt: -fx-control-inner-background;
-
     -fx-accent: -darcula-accent;
-
     -fx-default-button: #365880; /*54 88 128*/
-
+    -fx-gradient-one: #60AFFF32;
+    -fx-gradient-two: #60afff64;
+    -fx-gradient-three: #60afffb4;
+    -fx-gradient-four: #60afff78;
+    -fx-gradient-five: #60afff46;
     -fx-focus-color: -darcula-focus-color; /*75 110 175*/
     -fx-faint-focus-color: transparent;
-
     -fx-color: -fx-base;
-
     -fx-hover-base: -fx-base;
     -fx-pressed-base: -fx-base;
-
     -fx-text-background-color: -darcula-text;
-
     -fx-box-border: -darcula-border-color;
-
     -fx-text-box-border: -fx-box-border;
-
     -fx-shadow-highlight-color: transparent;
     -fx-outer-border: -fx-box-border;
     -fx-inner-border: -fx-base; /*76 80 82*/
@@ -49,63 +72,55 @@
     -fx-body-color: -fx-base; /*76 80 82*/
     -fx-body-color-bottomup: -fx-base;
     -fx-body-color-to-right: -fx-base;
-
     -fx-text-base-color: -fx-text-background-color;
     -fx-text-inner-color: -fx-text-background-color;
-
     -fx-mark-color: -fx-text-background-color;
     -fx-mark-highlight-color: transparent;
-
     -fx-selection-bar: -fx-focus-color;
     -fx-selection-bar-non-focused: #0d293e;
-
     /*-fx-cell-hover-color: unused;*/
     -fx-cell-focus-inner-border: transparent;
-
     /*-fx-page-bullet-border: unused;*/
     /*-fx-page-indicator-hover-border: unused;*/
-
     -fx-focused-text-base-color: -fx-text-background-color;
     -fx-focused-mark-color: -fx-text-background-color;
 
 
-    -fx-font-family: "Syne Mono";
+    /* -fx-font-family: "Syne Mono"; */
 }
 
-.top-bar-button .jfx-rippler {
-    -jfx-rippler-fill: -darcula-focus-color;
+.jfx-button .jfx-rippler {
+    -jfx-rippler-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, -darcula-focus-color 0.0%, -darcula-focus-color 20%, transparent 60%, transparent 100.0%)
 }
 
-.frame {
-    -fx-background-color: -fx-base;
-    -fx-border-color: -darcula-background-darkest;
-    -fx-border-width: thick;
-    -fx-border-style: inset;
-
-    /*-fx-effect: dropshadow(three-pass-box, black, 10, 1.0, 2, 2)*/
-
+.jfx-combo-box .prompt-container .text {
+    -fx-fill: -fx-text-base-color;
 }
 
-.top-bar {
-    -fx-background-color: -darcula-background-darkest;
-    -fx-border-color: -darcula-background-darkest;
-    -fx-border-style: inset;
-
-    /*-fx-border-width: 0 0 2px 0;*/
-}
-
-
-.background {
-    -fx-background-color: -fx-base;
-}
 
 Text {
     -fx-fill: -darcula-text;
-    -fx-font-family: "Syne Mono";
+    /* -fx-font-family: "Syne Mono"; */
 }
 
 Text:disabled {
     -fx-fill: -darcula-text-disabled;
+}
+
+.server-log-text {
+    -fx-fill: #00FFFF;
+}
+
+.client-log-text {
+    -fx-fill: #008000;
+}
+
+.gui-log-text {
+    -fx-fill: #FFA500;
+}
+
+.error-log-text {
+    -fx-fill: #FF0000;
 }
 
 .label:disabled,
@@ -154,16 +169,16 @@ Text:disabled {
 }
 
 .hyperlink {
-    -fx-text-fill: #589df6; /*88 157 246*/
+    -fx-text-fill: -hyperlink-text-fill-color; /*88 157 246*/
 }
 
 .hyperlink:hover {
-    -fx-text-fill: #52639a; /*82 99 155*/
+    -fx-text-fill: -hyperlink-text-fill-cover-hover; /*82 99 155*/
     -fx-underline: true;
 }
 
 .hyperlink:armed {
-    -fx-text-fill: #bc6f25; /*186 111 37*/
+    -fx-text-fill: -hyperlink-text-fill-color-armed; /*186 111 37*/
     -fx-underline: true;
 }
 
@@ -232,17 +247,22 @@ Text:disabled {
 .split-menu-button,
 .color-picker,
 .menu-button {
-    -fx-background-color: -darcula-border-color, #4c5052; /*linear-gradient(to bottom, #555a5c, #414648)*/
+    -fx-background-color: -darcula-border-color, -darkgray; /*linear-gradient(to bottom, #555a5c, #414648)*/
     -fx-background-insets: 0, 1;
     -fx-background-radius: 3px, 3px;
 }
 
 .button:default {
-    -fx-background-color: #4c708c, #365880; /*linear-gradient(to bottom, #384f6b, #233143)*/
+    -fx-background-color: -button-default-dark-color, -fx-default-button; /*linear-gradient(to bottom, #384f6b, #233143)*/
+}
+
+.button:cancel {
+    -fx-background-color: -darcula-error-color;
+
 }
 
 .toggle-button:selected {
-    -fx-background-color: -darcula-border-color, #2d2f30; /*linear-gradient(to top, #454a4c, #313638)*/
+    -fx-background-color: -darcula-border-color, -very-darkgray; /*linear-gradient(to top, #454a4c, #313638)*/
 }
 
 .button:disabled,
@@ -268,18 +288,18 @@ Text:disabled {
 .split-menu-button:focused,
 .color-picker:armed,
 .color-picker:focused {
-    -fx-background-color: #60afff32, #60afff64, #60afffb4, #60afff78, #60afff46, #4c5052;
+    -fx-background-color: -fx-gradient-one, -fx-gradient-two, -fx-gradient-three, -fx-gradient-four, -fx-gradient-five, -darkgray;
     -fx-background-insets: -2, -1, 0, 1, 2;
     -fx-background-radius: 6, 5, 4, 3, 2;
 }
 
 .toggle-button:selected:focused {
-    -fx-background-color: #60afff32, #60afff64, #60afffb4, #60afff78, #60afff46, #2d2f30;
+    -fx-background-color: -fx-gradient-one, -fx-gradient-two, -fx-gradient-three, -fx-gradient-four, -fx-gradient-five, -very-darkgray;
 }
 
 .button:armed:default,
 .button:focused:default {
-    -fx-background-color: #60afff32, #60afff64, #60afffb4, #60afff78, #60afff46, #365880;
+    -fx-background-color: -fx-gradient-one, -fx-gradient-two, -fx-gradient-three, -fx-gradient-four, -fx-gradient-five, -fx-default-button;
 }
 
 .combo-box:focused,
@@ -288,7 +308,7 @@ Text:disabled {
 .choice-box:showing,
 .date-picker:focused,
 .spinner:focused {
-    -fx-background-color: #60afff32, #60afff64, #60afffb4, #60afff78, #60afff46, -darcula-base;
+    -fx-background-color: -fx-gradient-one, -fx-gradient-two, -fx-gradient-three, -fx-gradient-four, -fx-gradient-five, -darcula-base;
     -fx-background-insets: -2, -1, 0, 1, 2;
     -fx-background-radius: 6, 5, 4, 3, 2;
 }
@@ -297,14 +317,14 @@ Text:disabled {
 .text-area:focused,
 .combo-box:editable:focused,
 .date-picker:editable:focused {
-    -fx-background-color: #60afff32, #60afff64, #60afffb4, #60afff78, #60afff46, -darcula-text-input-background;
+    -fx-background-color: -fx-gradient-one, -fx-gradient-two, -fx-gradient-three, -fx-gradient-four, -fx-gradient-five, -darcula-text-input-background;
     -fx-background-insets: -2, -1, 0, 1, 2;
     -fx-background-radius: 6, 5, 4, 3, 2;
 }
 
 /*.combo-box:hover,*/
 /*.choice-box:hover {*/
-/*    -darcula-border-color: #767676;*/
+/*    -darcula-border-color: -gray-600;*/
 /*}*/
 
 /* arrow buttons */
@@ -318,7 +338,7 @@ Text:disabled {
 
 .split-menu-button > .arrow-button,
 .color-picker:editable > .arrow-button {
-    -fx-background-color: -darcula-border-color, #4c5052;
+    -fx-background-color: -darcula-border-color, -darkgray;
     -fx-background-insets: 0, 1;
     -fx-background-radius: 0 3 3 0;
 }
@@ -380,12 +400,12 @@ Text:disabled {
 }
 
 .separator:vertical .line {
-    -fx-border-color: #2b2b2b;
+    -fx-border-color: -darcula-background-darkest;
     -fx-border-width: 0 0 0 1;
 }
 
 .separator:horizontal .line {
-    -fx-border-color: #2b2b2b;
+    -fx-border-color: -darcula-background-darkest;
     -fx-border-width: 1 0 0 0;
 }
 
@@ -394,29 +414,29 @@ Text:disabled {
 }
 
 .scroll-bar:vertical > .thumb {
-    -fx-background-color: #595b5d; /*linear-gradient(to right, #5f5f5f, #505050);*/
+    -fx-background-color: -gray-700; /*linear-gradient(to right, -gray-700, -gray-800);*/
     -fx-background-radius: 0;
     /*-fx-background-radius: 3px;*/
-    /*-fx-border-color: #555555;*/
+    /*-fx-border-color: -gray-700;*/
     /*-fx-border-insets: 2px, 3px, 4px;*/
     /*-fx-border-radius: 3px;*/
 }
 
 .scroll-bar:vertical > .thumb:hover {
-    -fx-background-color: #666868; /*linear-gradient(to right, #707070, -darcula-border-color);*/
+    -fx-background-color: -gray-700; /*linear-gradient(to right, -gray-600, -darcula-border-color);*/
 }
 
 .scroll-bar:horizontal > .thumb {
-    -fx-background-color: #595b5d; /*linear-gradient(to bottom, #5f5f5f, #505050);*/
+    -fx-background-color: -gray-700; /*linear-gradient(to bottom, -gray-700, -gray-800);*/
     -fx-background-radius: 0;
     /*-fx-background-radius: 3px;*/
-    /*-fx-border-color: #555555;*/
+    /*-fx-border-color: -gray-700;*/
     /*-fx-border-insets: 2px, 3px, 4px;*/
     /*-fx-border-radius: 3px;*/
 }
 
 .scroll-bar:horizontal > .thumb:hover {
-    -fx-background-color: #666868; /*linear-gradient(to bottom, #707070, -darcula-border-color);*/
+    -fx-background-color: -gray-700; /*linear-gradient(to bottom, -gray-600, -darcula-border-color);*/
 }
 
 .scroll-bar > .increment-button,
@@ -456,18 +476,18 @@ Text:disabled {
 }
 
 .slider > .track {
-    -fx-background-color: #2b2b2b;
+    -fx-background-color: -darcula-background-darkest;
 }
 
 .slider > .thumb {
-    -fx-background-color: #888888;
-    -fx-border-color: #707070;
+    -fx-background-color: -gray-600;
+    -fx-border-color: -gray-600;
     -fx-border-radius: 50%;
 }
 
 .slider > .thumb:disabled {
-    -fx-background-color: #555555;
-    -fx-border-color: #444444;
+    -fx-background-color: -gray-700;
+    -fx-border-color: -gray-800;
 }
 
 .slider > .axis {
@@ -500,7 +520,7 @@ Text:disabled {
 
 .check-box:armed > .box,
 .check-box:focused > .box {
-    -fx-background-color: #60afff32, #60afff64, #60afffb4, #60afff78, #60afff46, -darcula-text-input-background;
+    -fx-background-color: -fx-gradient-one, -fx-gradient-two, -fx-gradient-three, -fx-gradient-four, -fx-gradient-five, -darcula-text-input-background;
     -fx-background-insets: -2, -1, 0, 1, 2;
     -fx-background-radius: 6, 5, 4, 3, 2;
 }
@@ -511,7 +531,7 @@ Text:disabled {
 
 .radio-button:armed > .radio,
 .radio-button:focused > .radio {
-    -fx-background-color: #60afff32, #60afff64, #60afffb4, #60afff78, #60afff46, -darcula-text-input-background;
+    -fx-background-color: -fx-gradient-one, -fx-gradient-two, -fx-gradient-three, -fx-gradient-four, -fx-gradient-five, -darcula-text-input-background;
     -fx-background-insets: -2, -1, 0, 1, 2;
     -fx-background-radius: 50%, 50%, 50%, 50%, 50%;
 }
@@ -525,19 +545,19 @@ Text:disabled {
 .radio-button:selected > .radio > .dot,
 .check-box:selected > .box > .mark,
 .check-box:indeterminate > .box > .mark {
-    -fx-background-color: linear-gradient(#aaaaaa 95%, #1e1e1e 5%);
+    -fx-background-color: linear-gradient(-gray-500 95%, #1e1e1e 5%);
 }
 
 .radio-button:disabled:selected > .radio > .dot,
 .check-box:disabled:selected > .box > .mark,
 .check-box:disabled:indeterminate > .box > .mark {
-    -fx-background-color: linear-gradient(#787878 95%, #3c3c3c 5%);
+    -fx-background-color: linear-gradient(-gray-600 95%, -gray-800 5%);
 }
 
 /*menu*/
 .menu-bar {
     -fx-padding: 0 0 2 0;
-    -fx-background-color: #555555, #282828, -darcula-base;
+    -fx-background-color: -gray-700, -gray-900, -darcula-base;
     -fx-background-insets: 0, 0 0 1 0, 0 0 2 0;
 }
 
@@ -570,37 +590,37 @@ Text:disabled {
     -fx-background-color: -darcula-base;
 }
 
-.radio-menu-item:checked > .left-container > .radio,
-.check-menu-item:checked > .left-container > .check {
+.radio-menu-item:selected > .left-container > .radio,
+.check-menu-item:selected > .left-container > .check {
     -fx-background-color: -darcula-text;
 }
 
-.radio-menu-item:disabled:checked > .left-container > .radio,
-.check-menu-item:disabled:checked > .left-container > .check {
+.radio-menu-item:disabled:selected, > .left-container > .radio,
+.check-menu-item:disabled:selected > .left-container > .check {
     -fx-background-color: -darcula-text-disabled;
 }
 
 /*tool-bar*/
 .tool-bar:vertical {
     -fx-padding: 0 0.5em 0 0.5em;
-    -fx-background-color: #303334, -darcula-base;
+    -fx-background-color: -gray-blue-900, -darcula-base;
     -fx-background-insets: 0, 0 0 0 1;
 }
 
 .tool-bar:horizontal {
     -fx-padding: 0 0.5em 0 0.5em;
-    -fx-background-color: #303334, -darcula-base;
+    -fx-background-color: -gray-blue-900, -darcula-base;
     -fx-background-insets: 0, 0 0 1 0;
 }
 
 .tool-bar:horizontal .separator:vertical > .line {
-    -fx-border-color: #6f6f6f;
+    -fx-border-color: -gray-600;
     -fx-border-width: 0 0 0 1;
     -fx-border-style: dashed;
 }
 
 .tool-bar:vertical .separator:horizontal > .line {
-    -fx-border-color: #6f6f6f;
+    -fx-border-color: -gray-600;
     -fx-border-width: 1 0 0 0;
     -fx-border-style: dashed;
 }
@@ -614,14 +634,14 @@ Text:disabled {
 .tool-bar .button:hover,
 .tool-bar .toggle-button:hover,
 .tool-bar .toggle-button:selected {
-    -fx-background-color: #464a4d;
-    -fx-border-color: #767c81;
+    -fx-background-color: -gray-800;
+    -fx-border-color: -gray-600;
 }
 
 .tool-bar .button:armed,
 .tool-bar .toggle-button:armed {
-    -fx-background-color: #565a5d; /*85 89 92*/
-    -fx-border-color: #7a8084; /*122 128 132*/
+    -fx-background-color: -gray-700; /*85 89 92*/
+    -fx-border-color: -gray-600; /*122 128 132*/
     -fx-border-width: 1;
     -fx-border-insets: 0;
 }
@@ -633,7 +653,7 @@ Text:disabled {
 
 .tab-pane > .tab-header-area > .tab-header-background {
     -fx-padding: 0;
-    -fx-border-color: #4b4b4b;
+    -fx-border-color: -gray-800;
     -fx-border-width: 1 0 1 0;
 }
 
@@ -645,55 +665,55 @@ Text:disabled {
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:left {
-    -fx-border-color: #4b4b4b;
+    -fx-border-color: -gray-800;
     -fx-border-width: 0 0 0 1;
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:left:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #4a7a88 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -tab-bottom-selected 12.5%);
 }
 
 .tab-pane:focused > .tab-header-area > .headers-region > .tab:left:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #439eb8 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -darcula-tab-pane-focused-color 12.5%);
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:right {
-    -fx-border-color: transparent #4b4b4b transparent transparent;
+    -fx-border-color: transparent -gray-800 transparent transparent;
     -fx-border-width: 0 1 0 0;
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:right:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #4a7a88 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -tab-bottom-selected 12.5%);
 }
 
 .tab-pane:focused > .tab-header-area > .headers-region > .tab:right:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #439eb8 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -darcula-tab-pane-focused-color 12.5%);
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:top {
-    -fx-border-color: #4b4b4b;
+    -fx-border-color: -gray-800;
     -fx-border-width: 0 1 0 0;
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:top:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #4a7a88 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -tab-bottom-selected 12.5%);
 }
 
 .tab-pane:focused > .tab-header-area > .headers-region > .tab:top:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #439eb8 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -darcula-tab-pane-focused-color 12.5%);
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:bottom {
-    -fx-border-color: #4b4b4b;
+    -fx-border-color: -gray-800;
     -fx-border-width: 0 0 0 1;
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:bottom:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #4a7a88 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -tab-bottom-selected 12.5%);
 }
 
 .tab-pane:focused > .tab-header-area > .headers-region > .tab:bottom:selected {
-    -fx-background-color: linear-gradient(to bottom, #515658 87.5%, #439eb8 12.5%);
+    -fx-background-color: linear-gradient(to bottom, -gray-700 87.5%, -darcula-tab-pane-focused-color 12.5%);
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
@@ -708,13 +728,14 @@ Text:disabled {
 }
 
 .titled-pane > .title {
-    -fx-background-color: linear-gradient(to bottom, #3b3e40, #383b3c);
-    -fx-border-color: #4b4b4b transparent #242627 transparent;
+    -fx-background-color: linear-gradient(to bottom, -gray-700, -gray-800);
+    -fx-border-color: -gray-800 transparent -gray-900 transparent;
     -fx-border-width: 1 0 1 0;
 }
 
 .titled-pane:focused > .title {
-    -fx-background-color: linear-gradient(to bottom, #434f60, #414c5d);
-    -fx-border-color: #4b4b4b transparent #2a313c transparent;
+    -fx-background-color: linear-gradient(to bottom, -darcula-titled-pane-focused-color-top,
+    -darcula-titled-pant-focused-color-bottom);
+    -fx-border-color: -gray-800 transparent -tab-bottom-selected transparent;
     -fx-border-width: 1 0 1 0;
 }
