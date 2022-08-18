@@ -1,0 +1,243 @@
+.root {
+
+    -primary-color: #7CBBC3;
+    -primary-color-lighter: #96C8CF;
+    -primary-color-darker: #568288;
+    -primary-contrast-text: rgba(0, 0, 0, 0.87);
+
+    -secondary-color: #607d8b;
+    -secondary-color-lighter: #78909c;
+    -secondary-color-darker: #435761;
+    -secondary-contrast-text: #FFFFFF;
+
+    -warning-color: #ff9800;
+    -warning-color-lighter: #ffa726;
+    -warning-color-darker: #c67700;
+    -warning-contrast-text: rgba(0, 0, 0, 0.87);
+
+    -error-color: #f44336;
+    -error-color-lighter: #ef5350;
+    -error-color-darker: #b80000;
+    -error-contrast-text: #FFFFFF;
+
+    -success-color: #4caf50;
+    -success-color-lighter: #66bb6a;
+    -success-color-darker: #2e7d32;
+    -success-contrast-text: rgba(0, 0, 0, 0.87);
+
+    -info-color: #2196f3;
+    -info-color-lighter: #42a5f5;
+    -info-color-darker: #0d47a1;
+    -info-contrast-text: #FFFFFF;
+
+    -background-default: #303030;
+    -background-default-lighter: #404040;
+    -background-default-darker: #1a1a1a;
+
+    -background-paper: #424242;
+    -background-paper-lighter: #616161;
+    -background-paper-darker: #1a1a1a;
+
+    -text-primary: #FFFFFF;
+    -text-secondary: rgba(255, 255, 255, 0.7);
+    -text-disabled: rgba(255, 255, 255, 0.5);
+    -text-hint: rgba(255, 255, 255, 0.5);
+
+    -divider-color: rgba(255, 255, 255, 0.12);
+
+    -default-font-family: "Syne Mono", monospace;
+
+    -primary-rippler: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, -primary-color 0.0%, -background-paper-lighter 100.0%);
+
+    -underline-primary: linear-gradient(from 0.0% 100.0% to 100.0% 100.0%, transparent 0.0%, -primary-color 15%, -primary-color 85%, transparent 100.0%);
+    -fx-background-color: -background-default;
+    -fx-text-fill: -text-primary;
+
+
+}
+
+* {
+    -fx-text-fill: -text-primary;
+}
+
+.scroll-pane .scroll-bar:vertical .track-background {
+    -fx-background-color: -divider-color;
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button {
+
+}
+
+.scroll-pane .scroll-bar:vertical .increment-button .increment-arrow {
+
+}
+
+.scroll-pane .scroll-bar:vertical .decrement-button {
+
+}
+
+.scroll-pane .scroll-bar:vertical .decrement-button .decrement-arrow {
+
+}
+
+.scroll-pane .scroll-bar:vertical .track {
+
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+
+}
+
+
+.titled-pane .content,
+.scroll-pane .viewport,
+.tab-pane:top .tab-content-area,
+VBox, HBox, .accordion, .scroll-pane, .titled-pane, .tab-pane, .tab, AnchorPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.top-left-aligned {
+    -fx-alignment: top-left;
+}
+
+.tab:selected:top .tab-container .focus-indicator {
+    visibility: false;
+}
+
+.menu-bar {
+    -fx-background-color: -background-paper;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -divider-color;
+    -fx-text-fill: -text-primary;
+}
+
+.context-menu {
+    -fx-background-color: -background-paper-lighter;
+    -fx-text-fill: -text-primary;
+    -fx-font-size: 0.9em;
+    -fx-effect: dropshadow(gaussian, black, 1, 1, 5, 5)
+}
+.separator,
+.separator .line {
+    -fx-border-width: 0 0 0.5 0;
+    -fx-border-color: linear-gradient(from 0.0% 100.0% to 100.0% 100.0%, transparent 0.0%, -primary-color 20%, -primary-color 80%, transparent 100.0%);
+    -fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 100.0%, transparent 0.0%, -primary-color 20%, -primary-color 80%, transparent 100.0%);
+}
+
+
+.menu,
+.menu-item {
+    -fx-background-color: background-lighter;
+
+}
+
+.jfx-button .jfx-rippler {
+    -jfx-rippler-fill: -primary-rippler;
+}
+
+.jfx-button .text {
+    -fx-fill: -text-primary;
+}
+
+.jfx-button:armed,
+.jfx-button:hover,
+.jfx-button:focused,
+.jfx-button {
+    -jfx-button-style: RAISED;
+    -fx-text-fill: --text-primary;
+    -fx-background-color: -background-paper-lighter;
+    -fx-background-radius: 3px;
+    -fx-background-insets: 0px;
+}
+
+.jfx-chip-view .jfx-chip .close-button {
+    -fx-background-color: -text-secondary;
+    -fx-pref-width: 20;
+    -fx-min-width: -fx-pref-width;
+    -fx-max-width: -fx-pref-width;
+    -fx-pref-height: 20;
+    -fx-min-height: -fx-pref-height;
+    -fx-max-height: -fx-pref-height;
+    -fx-background-radius: 20;
+}
+.jfx-chip-view .jfx-chip .close-button .jfx-rippler {
+    -jfx-rippler-fill: -primary-rippler;
+}
+
+.jfx-chip-view .jfx-chip .close-button .jfx-svg-glyph {
+    -fx-shape: "M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4  L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1  c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1  c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z";
+    -fx-background-color: -text-primary;
+    -jfx-size: 8;
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-close-button {
+    -fx-background-color: TRANSPARENT;
+    -fx-pref-width: 24;
+    -fx-pref-height: 24;
+    -fx-min-width: -fx-pref-width;
+    -fx-max-width: -fx-pref-width;
+    -fx-min-height: -fx-pref-height;
+    -fx-max-height: -fx-pref-height;
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-close-button .jfx-rippler{
+    -jfx-rippler-fill: -primary-rippler;
+}
+
+.jfx-tab-pane .headers-region .tab .tab-container .tab-close-button > .jfx-svg-glyph {
+    -fx-shape: "M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z";
+    -jfx-size: 12;
+    -fx-background-color: -text-primary;
+}
+
+.jfx-tab-pane .headers-region .tab:selected .tab-container .tab-close-button > .jfx-svg-glyph {
+    -fx-background-color: -text-primary;
+}
+
+.tab-pane:top .tab-header-area .headers-region,
+.tab-pane:top .tab-header-area .tab-header-background {
+    -fx-background-color: -background-paper;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: -background-darker;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:selected:top {
+    -fx-background-color: -background-default;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: transparent transparent -underline-primary transparent;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:top {
+    -fx-text-fill: -text-primary;
+    -fx-background-color: -background-paper-lighter;
+}
+
+.tab-pane:top .tab-header-area .headers-region .tab:top .tab-container .tab-label .text {
+    -fx-fill: -text-primary;
+}
+
+.tab:selected:top .tab-container .focus-indicator {
+    -fx-fill: transparent;
+}
+
+.jfx-check-box:selected,
+.jfx-check-box:armed,
+.jfx-check-box {
+    -jfx-checked-color: -primary-color;
+    -jfx-unchecked-color: -background-paper-lighter;
+}
+
+.jfx-check-box > .box {
+    -background-color: -primary-color;
+}
+
+.jfx-check-box:indeterminate > .box {
+    -fx-background-color: -primary-color;
+}
+
+.titled-pane .title {
+    -fx-border-color: -background-paper-darker transparent -background-paper-darker transparent;
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, transparent 0.0%, -background-paper-lighter 20%, -background-paper-lighter 30%, -background-paper-lighter 70%, -background-paper-lighter 80%, transparent 100.0%);
+}
