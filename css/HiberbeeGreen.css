@@ -1,0 +1,540 @@
+.root {
+
+    -custom-primary: #424242;
+    -custom-primary-dark: #1b1b1b;
+    -custom-primary-light: #6d6d6d;
+
+    -custom-secondary-light: #6abf69;
+    -custom-secondary: #388e3c;
+    -custom-secondary-dark: #2b4a32;
+
+    -custom-dark-text: #000000;
+    -custom-light-text: #BFBFBFFF;
+
+    -custom-error: #642c2c;
+    -custom-warn: #985e29;
+
+
+    -fx-base: rgb(12, 12, 12);
+    -fx-dark-text-color: rgb(191, 191, 191);
+    -fx-mid-text-color: rgb(141, 141, 141);
+    -fx-light-text-color: rgb(191, 191, 191);
+
+    -fx-accent-base: -custom-secondary-dark;
+    -fx-accent-light: -custom-secondary;
+    -fx-accent-lighter: -custom-secondary-light;
+
+    -fx-accent: -fx-accent-base;
+    -fx-focus-color: -fx-accent;
+
+    -fx-border: rgb(90, 90, 90);
+    -fx-border-focus: rgb(125, 125, 125);
+
+
+    -fx-bg-darker: rgb(25, 27, 30);
+    -fx-bg-dark: rgb(40, 40, 40);
+    -fx-bg: rgb(50, 50, 50);
+    -fx-bg-light: rgb(65, 65, 65);
+    -fx-bg-lighter: rgb(77, 77, 77);
+}
+
+.frame {
+    -fx-border-color: -fx-base;
+    -fx-border-width: 2px;
+    -fx-border-radius: 1px;
+    -fx-border-style: ridge;
+}
+
+/*tool-bar*/
+.tool-bar:vertical {
+    -fx-padding: 0 0.5em 0 0.5em;
+    -fx-background-color: -fx-bg-darker;
+    -fx-background-insets: 0, 0 0 0 1;
+}
+
+.tool-bar:horizontal {
+    -fx-padding: 0 0.5em 0 0.5em;
+    -fx-background-color: -fx-bg-darker;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.tool-bar:horizontal .separator:vertical > .line {
+    -fx-border-color: -fx-bg;
+    -fx-border-width: 0 0 0 1;
+    -fx-border-style: dashed;
+}
+
+.tool-bar:vertical .separator:horizontal > .line {
+    -fx-border-color: -fx-bg-light;
+    -fx-border-width: 1 0 0 0;
+    -fx-border-style: dashed;
+}
+
+.tool-bar .button,
+.tool-bar .toggle-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+}
+
+.tool-bar .button:armed,
+.tool-bar .toggle-button:armed {
+    -fx-background-color: -fx-bg-dark;
+    -fx-text-fill: -fx-mid-text-color;
+}
+
+/* ========== Buttons ======================== */
+.check-box > .box,
+.radio-button > .radio,
+.button {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: -fx-bg;
+}
+.toggle-button:hover {
+	-fx-background-color: -fx-accent-base;
+	-fx-text-fill: -custom-dark-text;
+	-fx-border-color: -fx-accent-lighter;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+}
+
+.toggle-button:selected {
+    -fx-text-fill: -custom-light-text;
+    -fx-border-color: -fx-accent;
+	-fx-background-color: -fx-base;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+}
+.toggle-button:selected:focused {
+    -fx-text-fill: -custom-light-text;
+	-fx-border-color: -fx-accent;
+	-fx-background-color: -fx-base;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+}
+.toggle-button:pressed {
+	-fx-text-fill: -custom-light-text;
+	-fx-border-color: -fx-accent-light;
+    -fx-background-color: -custom-secondary-dark;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+}
+.button:pressed {
+	-fx-background-color: -fx-bg-light;
+	-fx-text-fill: -fx-mid-text-color;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+}
+
+.check-box:hover > .box,
+.radio-button:hover > .radio,
+.button:hover {
+    -fx-border-color: -fx-accent;
+    -fx-background-color: -fx-bg-lighter;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-border-width: 1px;
+}
+
+.check-box > .box,
+.radio-button > .radio {
+    -fx-background-color: -fx-bg-light;
+}
+
+.radio-button > .radio {
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+
+
+
+/* ========== ComboBox ======================== */
+.combo-box {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: -fx-bg-light;
+}
+
+.combo-box:focused {
+    /* Brighter border on selection */
+    -fx-border-color: -fx-border-focus;
+}
+
+.combo-box:focused > .arrow-button {
+    /* Brighter border on selection */
+    -fx-border-color: -fx-border-focus;
+}
+
+.combo-box > .arrow-button {
+    -fx-background-color: -fx-bg;
+    -fx-border-width: 0 0 0 1px;
+    -fx-border-color: -fx-border;
+}
+
+.combo-box > .arrow-button > .arrow {
+    -fx-background-color: -fx-accent;
+}
+
+.combo-box:showing > .arrow-button,
+.combo-box > .arrow-button:hover {
+    -fx-background-color: -fx-bg-light;
+}
+
+.combo-box-popup > .list-view * .list-cell:selected {
+    -fx-background-color: -fx-bg-darker;
+    -fx-text-fill: -fx-accent;
+}
+
+.combo-box-popup > .list-view * .list-cell:hover {
+    -fx-background-color: -fx-bg-darker;
+    -fx-text-fill: -fx-accent;
+}
+
+.choice-box .context-menu {
+    -fx-max-height: 275px;
+}
+
+/* ========== TextField ======================== */
+.text-field {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: -fx-bg-light;
+}
+
+.text-field:focused {
+    -fx-border-color: -fx-border-focus;
+    -fx-highlight-fill: -fx-bg-darker;
+    -fx-highlight-text-fill: -fx-accent;
+}
+
+/* ========== Slider ======================== */
+.slider {
+}
+
+.slider > .track {
+    -fx-background-color: -fx-bg-light;
+    -fx-background-insets: 1;
+}
+
+.slider > .track {
+    -fx-background-color: -fx-bg-light;
+    -fx-background-insets: 1;
+}
+
+.slider > .axis {
+}
+
+.slider > .thumb {
+    -fx-border-width: 0;
+    -fx-background-color: -fx-accent;
+}
+
+.slider:pressed .thumb {
+    -fx-border-radius: 200px;
+    -fx-border-insets: -5px;
+    -fx-border-width: 5px;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========== ProgressBar ======================== */
+.progress-bar {
+}
+
+.progress-bar > .track {
+    -fx-background-color: -fx-bg-light;
+    -fx-background-insets: 1px;
+}
+
+.progress-bar > .track {
+    -fx-background-color: -fx-bg-light;
+    -fx-background-insets: 1px;
+}
+
+.progress-bar > .bar {
+    -fx-border-width: 0;
+    -fx-background-color: -fx-accent;
+}
+
+/* ========== Spinner ======================== */
+.spinner {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: -fx-bg-light;
+}
+
+.spinner:focused {
+    -fx-border-color: -fx-border-focus;
+}
+
+.spinner > .text-field {
+    -fx-background-color: transparent;
+    -fx-background-radius: inherit;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.spinner > .increment-arrow-button,
+.spinner > .decrement-arrow-button {
+    -fx-border-width: 0;
+    -fx-background-color: -fx-bg;
+    -fx-background-radius: inherit;
+}
+
+.spinner > .increment-arrow-button {
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: -fx-border;
+}
+
+.spinner:focused > .increment-arrow-button {
+    -fx-border-color: -fx-border-focus;
+}
+
+.spinner > .increment-arrow-button:hover,
+.spinner > .decrement-arrow-button:hover {
+    -fx-background-color: -fx-bg-light;
+}
+
+.spinner > .increment-arrow-button > .increment-arrow,
+.spinner > .decrement-arrow-button > .decrement-arrow {
+    -fx-background-color: -fx-accent;
+}
+
+.spinner > .increment-arrow-button:hover > .increment-arrow,
+.spinner > .decrement-arrow-button:hover > .decrement-arrow {
+    -fx-background-color: -fx-accent-light;
+}
+
+.spinner > .increment-arrow-button:pressed > .increment-arrow,
+.spinner > .decrement-arrow-button:pressed > .decrement-arrow {
+    -fx-background-color: -fx-accent-lighter;
+}
+
+/* ========== Menu ======================== */
+.menu-bar {
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: black;
+    -fx-border-style: groove;
+    -fx-background-radius: 2px;
+    -fx-background-color: -fx-bg-dark;
+}
+
+.menu-item,
+.menu {
+    -fx-padding: 10px 20px 10px 20px;
+}
+
+.menu-item:focused > .label,
+.menu-item:hover > .label,
+.menu:hover > .label,
+.menu:showing > .label {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: -fx-bg-darker;
+}
+
+.context-menu {
+    -fx-padding: 0;
+    -fx-background-color: -fx-bg-dark;
+    -fx-border-color: -fx-border;
+    -fx-border-width: 1px;
+}
+
+/* Misc menu elements */
+.separator,
+.separator > .line {
+    -fx-background-color: -fx-border;
+}
+
+.separator:horizontal > .line {
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-insets: 0;
+}
+
+/* ========== Lists, Tables, and Trees ======================== */
+.table-view,
+.list-view,
+.tree-view {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-background-color: -fx-bg-dark;
+}
+
+.table-cell,
+.table-row-cell,
+.tree-table-row-cell,
+.tree-cell,
+.list-cell {
+    -fx-background-color: transparent;
+}
+
+.table-cell:focused,
+.table-row-cell:focused,
+.tree-table-row-cell:focused,
+.tree-cell:focused,
+.list-view * .list-cell:focused {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: -fx-bg-darker;
+}
+
+.tree-cell:focused > .tree-disclosure-node > .arrow,
+.tree-table-row-cell:focused > .tree-disclosure-node > .arrow {
+    -fx-background-color: -fx-bg-darker;
+}
+
+.table-column,
+.filler,
+.nested-column-header,
+.column-header-background {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:focused .text {
+    -fx-fill: -fx-bg-darker;
+}
+
+.table-row-cell .text {
+
+    -fx-fill: -fx-light-text-color;
+}
+
+/* ========== Tabs ======================== */
+.tab-pane {
+    -fx-tab-min-width: 100px;
+    -fx-border-width: 0;
+}
+
+.tab-header-area {
+    -fx-padding: 0;
+}
+
+.tab-header-background {
+    -fx-background-color: -fx-bg;
+    -fx-border-width: 0;
+}
+
+.tab {
+    -fx-padding: 4px;
+    -fx-background-color: -fx-bg;
+    -fx-background-radius: 0;
+}
+
+.tab-pane:top > .tab-header-area > .headers-region > .tab {
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: -fx-bg-dark;
+}
+
+.tab-pane:bottom > .tab-header-area > .headers-region > .tab {
+    -fx-border-width: 2px 0 0 0;
+    -fx-border-color: -fx-bg;
+}
+
+.tab-pane:left > .tab-header-area > .headers-region > .tab {
+    -fx-border-width: 0 2px 0 0;
+    -fx-border-color: -fx-bg;
+}
+
+.tab-pane:right > .tab-header-area > .headers-region > .tab {
+    -fx-border-width: 0 0 0 2px;
+    -fx-border-color: -fx-bg;
+}
+
+.tab:selected {
+
+    -fx-border-color: -fx-accent !IMPORTANT;
+}
+
+.tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+
+/* ========== Scrollbar ======================== */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -fx-bg-light;
+    -fx-background-radius: 0;
+}
+
+.scroll-bar .thumb:hover,
+.scroll-bar .thumb:pressed {
+    -fx-background-color: -fx-bg-lighter;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.scroll-bar .increment-button:hover,
+.scroll-bar .decrement-button:hover {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.scroll-bar .increment-button .increment-arrow,
+.scroll-bar .decrement-button .decrement-arrow {
+    -fx-background-color: -fx-border;
+}
+
+.scroll-bar .increment-button:hover .increment-arrow,
+.scroll-bar .decrement-button:hover .decrement-arrow {
+    -fx-background-color: -fx-border-focus;
+}
+
+/* ========== Variants ======================== */
+
+.cancel-button {
+    -fx-background-color: -custom-error;
+}
+
+.primary-button {
+    -fx-background-color: -custom-secondary;
+}
+
+.square {
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
+
+.round,
+.round:determinate .box,
+.round:determinate .box .mark,
+.round:selected,
+.round:hover,
+.round:armed,
+.round:focused {
+    -fx-border-radius: 200px;
+    -fx-background-radius: 200px;
+}
+
+.round > .arrow-button {
+    -fx-background-radius: 0 200px 200px 0;
+}
+
+.round > .increment-arrow-button {
+    -fx-background-radius: 0 13px 0 0;
+}
+
+.round > .decrement-arrow-button {
+    -fx-background-radius: 0 0 13px 0;
+}
