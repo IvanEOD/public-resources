@@ -4,4 +4,5 @@
 
 .hbox {
     -fx-background-color: black;   
+    -fx-padding: 10px;
 }
