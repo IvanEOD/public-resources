@@ -1,4 +1,4 @@
 .web-view {
     -fx-background-color: black;
-    -fx-blend-mode: lighten;
+    -fx-blend-mode: color-burn;
 }
