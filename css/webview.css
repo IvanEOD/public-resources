@@ -1,3 +1,7 @@
 .webview {
     -fx-background-color: black;
 }
+
+.hbox {
+    -fx-background-color: black;   
+}
