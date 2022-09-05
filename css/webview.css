@@ -1,4 +1,4 @@
 .webview {
     -fx-background-color: black;
-    -fx-blend-mode: color-burn;
+    -fx-blend-mode: overlay;
 }
