@@ -1,9 +1,14 @@
-.root {
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
 
+
+.root {
+    -custom-font-family: "Syne Mono";
+    -custom-background-color:  #1e1e1e;
+    -custom-text-fill: #cbcbcb;
+    -custom-divider-color: rgba(255, 255, 255, 0.12);
 
     -fx-text-fill: #cbcbcb;
     -fx-background-color: #1e1e1e;
-
 
 }
 
@@ -29,4 +34,45 @@
     -fx-background-color: #484848;
     /*-jfx-ripple-fill: #5b862d;*/
 
+}
+
+
+.title {
+    -fx-text-fill: -custom-text-fill;
+    -fx-font-size: 12;
+    -fx-font-family: -custom-font-family;
+}
+
+.main-window {
+    -fx-alignment: center;
+    -fx-background-color: -custom-background-color;
+    -fx-background-radius: 10;
+}
+
+.tool-bar {
+    -fx-background-radius: 10 10 0 0;
+    -fx-background-color: -custom-background-color;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: -custom-divider-color;
+}
+
+.minimize-button .text,
+.close-button:cancel .text {
+    -fx-text-fill: -custom-text-fill;
+    -fx-font-size: 8;
+    -fx-font-family: -custom-font-family;
+    -fx-font-weight: bold;
+}
+
+.close-button,
+.minimize-button {
+    -fx-border-color: -custom-divider-color;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-text-fill: -custom-text-fill;
+    -fx-background-radius: 5;
+}
+
+.minimize-button:hover {
+    -fx-background-color: -custom-background-color;
 }
