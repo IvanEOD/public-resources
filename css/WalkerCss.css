@@ -36,6 +36,11 @@
 
 }
 
+.titled-pane .content {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
 
 .title {
     -fx-text-fill: -custom-text-fill;
