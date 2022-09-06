@@ -3,17 +3,18 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane styleClass="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scripts.walker.WalkerGuiController">
+
+<Pane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scripts.walker.WalkerGuiController">
    <children>
-      <VBox styleClass="hide" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-border-radius: 10; -fx-border-style: solid;" styleClass="hide">
          <children>
-            <HBox styleClass="hide"  alignment="CENTER" prefHeight="25.0" prefWidth="600.0" spacing="5.0">
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="600.0" spacing="5.0" styleClass="hide">
                <children>
                   <JFXButton fx:id="refreshButton" buttonType="RAISED" prefHeight="25.0" prefWidth="125.0" text="Refresh" />
                   <Label fx:id="tileLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="331.0" text="0, 0, 0" textAlignment="CENTER">
@@ -30,11 +31,15 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <WebView fx:id="webview" prefHeight="366.0" prefWidth="590.0" style="-fx-page-fill: black;" />
+            <HBox alignment="CENTER">
+               <children>
+                  <WebView fx:id="webview" maxWidth="575.0" prefHeight="350.0" prefWidth="600.0" style="-fx-page-fill: black;" />
+               </children>
+            </HBox>
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </VBox>
    </children>
-</AnchorPane>
+</Pane>
