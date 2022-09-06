@@ -87,6 +87,7 @@ AnchorPane, HBox, VBox {
 
 .tool-bar {
     -fx-background-radius: 10 10 0 0;
+    -fx-border-radius: 10 10 0 0;
     -fx-background-color: -custom-background-color;
     -fx-border-width: 0 0 1 0;
     -fx-border-color: -custom-divider-color -custom-divider-color darkgrey -custom-divider-color;
