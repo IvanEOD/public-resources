@@ -27,12 +27,14 @@ AnchorPane, HBox, VBox {
 
 .background {
     -fx-background-color: -custom-background-color;
+    -fx-border-color: transparent;
     -fx-border-style: solid;
     -fx-border-radius: 10 10 10 10;
 }
 
 .content-panel {
     -fx-background-color: transparent;
+        -fx-border-color: transparent;
     -fx-border-style: solid;
     -fx-border-radius: 10 10 10 10;
 }
