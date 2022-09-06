@@ -14,7 +14,13 @@
 
 }
 
+AnchorPane {
+    -fx-background-color: transparent;
+}
 
+.frame {
+    -fx-background-color: transparent;
+}
 
 .background {
     -fx-background-color: dimgrey;
