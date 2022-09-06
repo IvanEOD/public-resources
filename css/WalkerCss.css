@@ -9,8 +9,8 @@
 
     -fx-text-fill: #cbcbcb;
     -fx-background-color: transparent;
-    
-   
+
+
 
 }
 
@@ -99,4 +99,8 @@ AnchorPane, HBox, VBox {
 
 .minimize-button:hover {
     -fx-background-color: -custom-background-color;
+}
+
+.hide {
+    -fx-background-color: transparent;
 }
