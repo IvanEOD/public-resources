@@ -43,7 +43,7 @@ AnchorPane, HBox, VBox {
 
 }
 
-.button, .jfx-button {
+.button, .jfx-button, .top-bar-button {
     -fx-font-family: -custom-font-family;
     -fx-text-fill: #cbcbcb;
     -fx-background-color: #484848;
