@@ -1,0 +1,32 @@
+.root {
+
+
+    -fx-text-fill: #cbcbcb;
+    -fx-background-color: #1e1e1e;
+
+
+}
+
+.web-view {
+
+    -fx-background-color: #1e1e1e;
+    -fx-page-fill: #1e1e1e;
+    -fx-border-radius: 10;
+
+
+}
+
+.label {
+
+    -fx-text-fill: #cbcbcb;
+    -fx-page-fill: #1e1e1e;
+
+}
+
+.button {
+
+    -fx-text-fill: #cbcbcb;
+    -fx-background-color: #484848;
+    -jfx-ripple-fill: #5b862d;
+
+}
