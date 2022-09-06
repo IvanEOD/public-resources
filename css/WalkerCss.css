@@ -14,7 +14,7 @@
 
 }
 
-AnchorPane {
+AnchorPane, HBox, VBox {
     -fx-background-color: transparent;
 }
 
@@ -44,7 +44,7 @@ AnchorPane {
 }
 
 .button {
-
+    -fx-font-family: -custom-font-family;
     -fx-text-fill: #cbcbcb;
     -fx-background-color: #484848;
     /*-jfx-ripple-fill: #5b862d;*/
