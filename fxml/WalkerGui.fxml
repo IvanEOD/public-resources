@@ -33,7 +33,7 @@
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <WebView fx:id="webview" maxWidth="575.0" prefHeight="350.0" prefWidth="600.0" style="-fx-page-fill: black;" />
+                  <WebView fx:id="webview" maxWidth="575.0" prefHeight="350.0" prefWidth="600.0"  maxHeight="375.0" style="-fx-page-fill: black;" />
                </children>
             </HBox>
          </children>
