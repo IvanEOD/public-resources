@@ -12,7 +12,7 @@
 
 <Pane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scripts.walker.WalkerGuiController">
    <children>
-      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-border-radius: 10; -fx-border-style: solid;" styleClass="hide">
+      <VBox prefHeight="400.0" prefWidth="600.0" styleClass="hide">
          <children>
             <HBox alignment="CENTER" prefHeight="25.0" prefWidth="600.0" spacing="5.0" styleClass="hide">
                <children>
