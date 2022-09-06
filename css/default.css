@@ -229,7 +229,7 @@ Text {
 }
 
 .add-button {
-    -fx-border-style: inset;
+/*     -fx-border-style: inset; */
 }
 
 .jfx-button:default {
