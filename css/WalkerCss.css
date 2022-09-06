@@ -113,4 +113,6 @@ AnchorPane, HBox, VBox {
 
 .hide {
     -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-radius: 10 10 10 10;
 }
