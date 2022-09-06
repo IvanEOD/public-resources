@@ -9,8 +9,17 @@
 
     -fx-text-fill: #cbcbcb;
     -fx-background-color: #1e1e1e;
+    
+   
 
 }
+
+
+
+.background {
+    -fx-background-color: dimgrey;
+}
+
 
 .web-view {
 
