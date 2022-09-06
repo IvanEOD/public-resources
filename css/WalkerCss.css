@@ -23,7 +23,11 @@ AnchorPane, HBox, VBox {
 }
 
 .background {
-    -fx-background-color: dimgrey;
+    -fx-background-color: -custom-background-color;
+}
+
+.content-panel {
+    -fx-background-color: transparent;
 }
 
 
