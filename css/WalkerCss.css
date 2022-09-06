@@ -20,7 +20,7 @@ AnchorPane, HBox, VBox {
 }
 
 .frame {
-    -fx-background-color: transparent;
+    -fx-background-color: -custom-background-color;
     -fx-border-style: solid;
     -fx-border-radius: 10 10 10 10;
 }
